@@ -102,6 +102,9 @@ def process_lrw(dataDir=LRW_DATA_DIR,
         # train-val or test
         for urlDir in tqdm.tqdm(sorted(glob.glob(os.path.join(setDir, '*/')))):
             url = urlDir.split('/')[-2]
+            if url < "2S0aEezKvBE":
+                continue
+            
             print(urlDir, url)
             print_time_till_now(start_time)
 
